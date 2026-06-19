@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turrittin Advisory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="brand-area">
+
+            <div class="menu-wrapper">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="logo">Turrittin Advisory</div>
+
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Financial Clarity for Growing Manufacturers</h1>
+
+    <p>
+        Helping manufacturing businesses improve cash flow,
+        forecasting, profitability, and financial decision-making.
+    </p>
+
+    <a href="#contact" class="btn">Schedule a Consultation</a>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+
+    <div class="services">
+
+        <a href="cash-flow.html" class="card">
+            <h3>Cash Flow Forecasting</h3>
+            <p>
+                Build and maintain 13-week cash flow forecasts to improve
+                visibility and prevent cash shortages.
+            </p>
+        </a>
+
+        <a href="fpa.html" class="card">
+            <h3>FP&A Support</h3>
+            <p>
+                Budgeting, forecasting, variance analysis, KPI reporting,
+                and management dashboards.
+            </p>
+        </a>
+
+        <a href="modeling.html" class="card">
+            <h3>Financial Modeling</h3>
+            <p>
+                Custom Excel models for planning, growth, acquisitions,
+                and strategic decisions.
+            </p>
+        </a>
+
+        <a href="valuation.html" class="card">
+            <h3>Business Valuation</h3>
+            <p>
+                Financial analysis and valuation support for acquisitions,
+                investments, and succession planning.
+            </p>
+        </a>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-container">
+
+        <div class="about-text">
+            <h2>About</h2>
+
+            <p>
+                My name is Alexander Turrittin. I specialize in financial
+                planning and analysis, cash flow management, and business
+                valuation. I work with manufacturing and industrial companies
+                to help management make better financial decisions through
+                clear reporting and actionable insights.
+            </p>
+
+            <p>
+                I am currently completing my MBA while gaining hands-on
+                experience in forecasting, financial reporting, and
+                operational finance.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="images/alex.png" alt="Alexander Turrittin">
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact</h2>
+
+    <p>Email: yourname@yourdomain.com</p>
+
+    <p>
+        Ready to improve your forecasting, reporting,
+        or financial planning process?
+    </p>
+
+    <a href="mailto:yourname@yourdomain.com" class="btn">
+        Send an Email
+    </a>
+</section>
+
+<footer>
+    © 2026 Turrittin Advisory. All Rights Reserved.
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    document.addEventListener("click", function(event) {
+        const menu = document.getElementById("dropdownMenu");
+        const wrapper = document.querySelector(".menu-wrapper");
+
+        if (!wrapper.contains(event.target)) {
+            menu.classList.remove("show");
+        }
+    });
+</script>
+
+</body>
+</html>
