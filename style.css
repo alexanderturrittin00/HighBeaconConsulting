@@ -27,19 +27,13 @@ header {
 }
 
 nav {
-    display: flex;
-    align-items: center;
+    width: 100%;
 }
 
 .brand-area {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.logo {
-    font-size: 1.4rem;
-    font-weight: bold;
+    width: 100%;
 }
 
 .menu-wrapper {
@@ -53,24 +47,37 @@ nav {
     font-size: 26px;
     cursor: pointer;
     line-height: 1;
-    padding: 0;
+    padding: 6px;
+    border-radius: 4px;
     font-family: inherit;
 }
 
 .menu-icon:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    margin-left: 24px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-logo {
+    margin-left: auto;
+    height: 65px;
+    width: auto;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 35px;
+    top: 42px;
     left: 0;
     background-color: #0f172a;
-    min-width: 180px;
+    min-width: 190px;
     padding: 15px;
     border-radius: 6px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .dropdown-menu.show {
@@ -88,7 +95,6 @@ nav {
     color: #cbd5e1;
 }
 
-
 /* Hero */
 
 .hero {
@@ -103,9 +109,9 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
 
+    min-height: 700px;
     padding: 120px 10%;
     text-align: center;
-    min-height: 700px;
 
     display: flex;
     flex-direction: column;
@@ -120,15 +126,17 @@ nav {
 }
 
 .hero p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.2rem;
 }
 
+/* Buttons */
+
 .btn {
-    width: auto;
     display: inline-block;
+    width: auto;
     margin-top: 30px;
     padding: 14px 30px;
     background-color: #0f172a;
@@ -156,32 +164,25 @@ section h2 {
     color: #0f172a;
 }
 
-/* Services */
+/* Cards / Services */
 
 .services {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    align-items: start;
 }
 
 .card {
+    display: block;
     background-color: white;
     border: 1px solid #e5e7eb;
-    padding: 28px;
+    padding: 22px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-
     text-decoration: none;
     color: inherit;
-
     transition: 0.2s ease;
-
-    .card {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: inherit;
-}
 }
 
 .card:hover {
@@ -196,6 +197,13 @@ section h2 {
 
 .card p {
     color: #475569;
+    margin: 0;
+}
+
+/* Who I Help */
+
+.who-help {
+    background-color: #ffffff;
 }
 
 /* About */
@@ -228,7 +236,7 @@ section h2 {
     width: 100%;
     max-width: 320px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Contact */
@@ -252,7 +260,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Mobile */
+/* Tablet */
 
 @media (max-width: 900px) {
     .services {
@@ -264,13 +272,19 @@ footer {
     }
 
     .about-container {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .about-image {
         margin-top: 30px;
     }
+
+    .header-logo {
+        height: 55px;
+    }
 }
+
+/* Mobile */
 
 @media (max-width: 600px) {
     header,
@@ -280,11 +294,25 @@ footer {
         padding-right: 6%;
     }
 
+    .logo {
+        margin-left: 16px;
+        font-size: 1.15rem;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    .header-logo {
+        height: 42px;
+    }
+
     .services {
         grid-template-columns: 1fr;
     }
 
     .hero {
+        min-height: 550px;
         padding-top: 80px;
         padding-bottom: 80px;
     }
