@@ -325,3 +325,32 @@ footer {
         font-size: 1rem;
     }
 }
+
+.popup {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.8);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}

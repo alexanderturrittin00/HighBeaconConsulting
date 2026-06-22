@@ -48,7 +48,7 @@
 
     <div class="services">
 
-        <a href="cash-flow.html" class="card">
+<a href="javascript:void(0);" class="card" onclick="openPopup('images/cashflow.png')">
             <h3>Cash Flow Forecasting</h3>
             <p>
                 Build and maintain rolling cash flow forecasts to improve
@@ -56,7 +56,7 @@
             </p>
         </a>
 
-        <a href="fpa.html" class="card">
+        <a href="javascript:void(0);" class="card" onclick="openPopup('images/fpa.png')">
             <h3>FP&A Support</h3>
             <p>
                 Budgeting, forecasting, variance analysis, KPI reporting,
@@ -64,7 +64,7 @@
             </p>
         </a>
 
-        <a href="modeling.html" class="card">
+<a href="javascript:void(0);" class="card" onclick="openPopup('images/modeling.png')">
             <h3>Financial Modeling</h3>
             <p>
                 Custom Excel models for planning, pricing, growth,
@@ -72,7 +72,7 @@
             </p>
         </a>
 
-        <a href="valuation.html" class="card">
+        <a href="javascript:void(0);" class="card" onclick="openPopup('images/valuation.png')">
             <h3>Business Valuation</h3>
             <p>
                 Financial analysis and valuation support for owners,
@@ -130,21 +130,16 @@
             <h2>About</h2>
 
             <p>
-                My name is Alexander Turrittin. I help growing businesses gain
-                better visibility into their finances through forecasting,
-                financial planning, reporting, and business analysis.
-            </p>
-
-            <p>
-                Whether you're planning for growth, improving cash flow, or
-                evaluating a major decision, I provide practical financial
-                insight to help you move forward with confidence.
-            </p>
-
-            <p>
-                I have a BS in Computer Science and am currently completing
-                my MBA while gaining hands-on experience in forecasting,
-                financial reporting, valuation, and operational finance.
+                My name is Alexander Turrittin. I am currently pursuing 
+                my MBA at Boise State University and have a background in 
+                software development, databases, web development, and 
+                programming. As an entrepreneur with experience building 
+                businesses and working in finance, I combine technical 
+                expertise with practical experience in forecasting, 
+                reporting, valuation, and operational finance. My goal is 
+                to help business owners gain clarity into their financial 
+                performance, make informed decisions, and identify 
+                opportunities for growth and profitability.
             </p>
         </div>
 
@@ -185,7 +180,22 @@
             menu.classList.remove("show");
         }
     });
+
+    function openPopup(imagePath) {
+        document.getElementById("popupImage").src = imagePath;
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
 </script>
+
+<div id="popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+
+    <img src="" id="popupImage">
+</div>
 
 </body>
 </html>
